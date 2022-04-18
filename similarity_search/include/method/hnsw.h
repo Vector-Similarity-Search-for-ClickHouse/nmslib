@@ -42,6 +42,11 @@
 #define METH_HNSW "hnsw"
 #define METH_HNSW_SYN "Hierarchical_NSW"
 
+namespace HnswWrapper {
+    template<typename dist_t>
+    struct IndexWrap;
+}
+
 namespace similarity {
 
 
@@ -496,6 +501,9 @@ namespace similarity {
             }
         }
 
+        friend class HnswWrapper::IndexWrap<float>;
+
+        friend class HnswWrapper::IndexWrap<int>;
 
         void SaveOptimizedIndex(std::ostream& output);
         void LoadOptimizedIndex(std::istream& input);
