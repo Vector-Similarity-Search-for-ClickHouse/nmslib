@@ -77,7 +77,7 @@ template float LInfNorm<float>(const float* pVect1, const float* pVect2, size_t 
 template <> 
 float LInfNormSIMD(const float* pVect1, const float* pVect2, size_t qty) {
 #ifndef PORTABLE_SSE2
-#pragma message WARN("LInfNormSIMD<float>: SSE2 is not available, defaulting to pure C++ implementation!")
+#pragma message("LInfNormSIMD<float>: SSE2 is not available, defaulting to pure C++ implementation!")
     return LInfNormStandard(pVect1, pVect2, qty);
 #else
     size_t qty4  = qty/4;
@@ -190,7 +190,7 @@ template float L1Norm<float>(const float* pVect1, const float* pVect2, size_t qt
 template <> 
 float L1NormSIMD(const float* pVect1, const float* pVect2, size_t qty) {
 #ifndef PORTABLE_SSE2
-#pragma message WARN("L1NormSIMD<float>: SSE2 is not available, defaulting to pure C++ implementation!")
+#pragma message("L1NormSIMD<float>: SSE2 is not available, defaulting to pure C++ implementation!")
     return L1NormStandard(pVect1, pVect2, qty);
 #else
     size_t qty4  = qty/4;
@@ -303,7 +303,7 @@ template float  L2Norm<float>(const float* pVect1, const float* pVect2, size_t q
 
 float L2SqrSIMD(const float* pVect1, const float* pVect2, size_t qty) {
 #ifndef PORTABLE_SSE2
-#pragma message WARN("L2SqrSIMD<float>: SSE2 is not available, defaulting to pure C++ implementation!")
+#pragma message("L2SqrSIMD<float>: SSE2 is not available, defaulting to pure C++ implementation!")
     float res = 0, diff;
     for (int i = 0; i < qty; ++i) {
         diff = pVect1[i] - pVect2[i];

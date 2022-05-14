@@ -80,7 +80,7 @@ template <>
 float ItakuraSaitoPrecompSIMD(const float* pVect1, const float* pVect2, size_t qty)
 {
 #ifndef PORTABLE_SSE2
-#pragma message WARN("ItakuraSaitoPrecompSIMD<float>: SSE2 is not available, defaulting to pure C++ implementation!")
+#pragma message("ItakuraSaitoPrecompSIMD<float>: SSE2 is not available, defaulting to pure C++ implementation!")
     return ItakuraSaitoPrecomp(pVect1, pVect2, qty);
 #else
     size_t qty4  = qty/4;
@@ -214,7 +214,7 @@ template <>
 float KLPrecompSIMD(const float* pVect1, const float* pVect2, size_t qty)
 {
 #ifndef PORTABLE_SSE2
-#pragma message WARN("KLPrecompSIMD<float>: SSE2 is not available, defaulting to pure C++ implementation!")
+#pragma message("KLPrecompSIMD<float>: SSE2 is not available, defaulting to pure C++ implementation!")
     return KLPrecomp(pVect1, pVect2, qty);
 #else
     size_t qty4  = qty/4;
@@ -326,7 +326,7 @@ template <>
 float KLGeneralPrecompSIMD(const float* pVect1, const float* pVect2, size_t qty)
 {
 #ifndef PORTABLE_SSE2
-#pragma message WARN("KLGeneralPrecompSIMD<float>: SSE2 is not available, defaulting to pure C++ implementation!")
+#pragma message("KLGeneralPrecompSIMD<float>: SSE2 is not available, defaulting to pure C++ implementation!")
     return KLGeneralPrecomp(pVect1, pVect2, qty);
 #else
     size_t qty4  = qty/4;

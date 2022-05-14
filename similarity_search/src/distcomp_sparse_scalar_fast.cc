@@ -228,7 +228,7 @@ ScalarProductFastRes SparseScalarProductFastIntern(const char* pData1, size_t le
       }
   scalar_inter:
 #else
-#pragma message WARN("No SSE 4.2, defaulting to scalar implementation!")
+#pragma message("No SSE 4.2, defaulting to scalar implementation!")
 #endif
 
       while (i1 < qty1 && i2 < qty2) {

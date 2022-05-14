@@ -52,7 +52,7 @@ DistTypeSIFT l2SqrSIFTPrecomp(const uint8_t* pVect1,
 DistTypeSIFT l2SqrSIFTPrecompSSE2(const uint8_t* pVect1,
                                   const uint8_t* pVect2) {
 #ifndef PORTABLE_SSE2
-  #pragma message WARN("l2SqrSIFTPrecompSSE4: SSE2 is not available")
+  #pragma message("l2SqrSIFTPrecompSSE4: SSE2 is not available")
   return l2SqrSIFTPrecomp(pVect1, pVect2);
 #else
   const unsigned dim = SIFT_DIM;
@@ -100,9 +100,9 @@ DistTypeSIFT l2SqrSIFTPrecompSSE2(const uint8_t* pVect1,
 DistTypeSIFT l2SqrSIFTPrecompAVX(const uint8_t* pVect1,
                                  const uint8_t* pVect2) {
 #ifndef PORTABLE_AVX2
-#pragma message WARN("l2SqrSIFTPrecompAVX: AVX2 is not available")
+#pragma message("l2SqrSIFTPrecompAVX: AVX2 is not available")
   #ifndef PORTABLE_SSE4
-  #pragma message WARN("l2SqrSIFTPrecompAVX: SSE4 is not available")
+  #pragma message("l2SqrSIFTPrecompAVX: SSE4 is not available")
     return l2SqrSIFTPrecomp(pVect1, pVect2);
   #else
     return l2SqrSIFTPrecompSSE2(pVect1, pVect2);

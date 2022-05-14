@@ -147,7 +147,7 @@ template <>
 float JSPrecompSIMDApproxLog(const float* pVect1, const float* pVect2, size_t qty)
 {
 #ifndef PORTABLE_SSE2
-#pragma message WARN("JSPrecompSIMDApproxLog<float>: SSE2 is not available, defaulting to pure C++ implementation!")
+#pragma message("JSPrecompSIMDApproxLog<float>: SSE2 is not available, defaulting to pure C++ implementation!")
     return JSPrecompApproxLog(pVect1, pVect2, qty);
 #else
     size_t qty4  = qty/4;
