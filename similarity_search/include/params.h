@@ -97,7 +97,7 @@ public:
           vals[objId].push_back(make_pair(name, obj.ParamValues[i]));
         }
       }      
-      sort(vals[objId].begin(), vals[objId].end());
+      std::sort(vals[objId].begin(), vals[objId].end());
     }
     
     inter.resize(ParamNames.size() + that.ParamNames.size());
