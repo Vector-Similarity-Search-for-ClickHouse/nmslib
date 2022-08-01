@@ -100,7 +100,7 @@ public:
                                               Method, QueryTimeParams);
       }
     }
-    if (LogInfo) LOG(LIB_INFO) << "experiment done at " << LibGetCurrentTime();
+    // if (LogInfo) LOG(LIB_INFO) << "experiment done at " << LibGetCurrentTime();
   }
 
 
@@ -309,7 +309,7 @@ public:
       }
     }
 
-    if (LogInfo) LOG(LIB_INFO) << "#### Finished " << QueryType::Type() << " " << LibGetCurrentTime();
+    // if (LogInfo) LOG(LIB_INFO) << "#### Finished " << QueryType::Type() << " " << LibGetCurrentTime();
   }
 };
 

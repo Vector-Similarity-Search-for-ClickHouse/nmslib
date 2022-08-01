@@ -31,7 +31,7 @@ using std::string;
 enum LogSeverity {LIB_DEBUG, LIB_INFO, LIB_WARNING, LIB_ERROR, LIB_FATAL};
 enum LogChoice  {LIB_LOGNONE, LIB_LOGFILE, LIB_LOGSTDERR, LIB_LOGCUSTOM};
 
-std::string LibGetCurrentTime();
+// std::string LibGetCurrentTime();
 
 // write log to file
 void InitializeLogger(LogChoice choice = LIB_LOGNONE, const char* logfile = NULL);

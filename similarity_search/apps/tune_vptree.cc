@@ -531,9 +531,9 @@ int main(int ac, char* av[]) {
     LOG(LIB_FATAL) << "Unknown distance value type: " << DistType;
   }
 
-  timer.split();
-  LOG(LIB_INFO) << "Time elapsed = " << timer.elapsed() / 1e6;
-  LOG(LIB_INFO) << "Finished at " << LibGetCurrentTime();
+  // timer.split();
+  // LOG(LIB_INFO) << "Time elapsed = " << timer.elapsed() / 1e6;
+  // LOG(LIB_INFO) << "Finished at " << LibGetCurrentTime();
 
   return 0;
 }

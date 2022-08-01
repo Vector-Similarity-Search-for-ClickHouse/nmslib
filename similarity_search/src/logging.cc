@@ -46,14 +46,14 @@ Logger * getGlobalLogger() {
 Logger::~Logger() {
 }
 
-std::string LibGetCurrentTime() {
-  time_t now;
-  time(&now);
-  struct tm* timeinfo = localtime(&now);
-  char time_string[50];
-  strftime(time_string, sizeof(time_string), "%Y-%m-%d %H:%M:%S", timeinfo);
-  return std::string(time_string);
-}
+// std::string LibGetCurrentTime() {
+//   time_t now;
+//   time(&now);
+//   struct tm* timeinfo = localtime(&now);
+//   char time_string[50];
+//   strftime(time_string, sizeof(time_string), "%Y-%m-%d %H:%M:%S", timeinfo);
+//   return std::string(time_string);
+// }
 
 template <typename T>
 void defaultOutput(T & stream, LogSeverity severity,
@@ -64,7 +64,7 @@ void defaultOutput(T & stream, LogSeverity severity,
   if (n != std::string::npos) {
     file.erase(file.begin(), file.begin() + n + 1);
   }
-  stream << LibGetCurrentTime() << " " << file << ":" << line
+  stream << /*LibGetCurrentTime() << " " <<*/ file << ":" << line
          << " (" << function << ") [" << log_severity[severity] << "] " << message << std::endl;
 }
 
@@ -114,6 +114,6 @@ RuntimeErrorWrapper::RuntimeErrorWrapper(const std::string& _file, int line, con
   if (n != std::string::npos) {
     file.erase(file.begin(), file.begin() + n + 1);
   }
-  stream() << LibGetCurrentTime() << " " << file << ":" << line
+  stream() << /*LibGetCurrentTime() << " " <<*/ file << ":" << line
            << " (" << function << ") ";
 }

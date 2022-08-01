@@ -337,8 +337,8 @@ int main(int ac, char* av[]) {
 
   timer.split();
 
-  LOG(LIB_INFO) << "Time elapsed = " << timer.elapsed() / 1e6;
-  LOG(LIB_INFO) << "Finished at " << LibGetCurrentTime();
+  // LOG(LIB_INFO) << "Time elapsed = " << timer.elapsed() / 1e6;
+  // LOG(LIB_INFO) << "Finished at " << LibGetCurrentTime();
 
   cout << endl << "==================================================" << endl;
   cout << (nFail ? "FAILURE" : "SUCCESS") << endl;
